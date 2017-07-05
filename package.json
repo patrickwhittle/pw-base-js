@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build": "webpack",
-    "prepublish": "yarn run build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "yarn run build"
   },
   "files": [
     "dist/"
