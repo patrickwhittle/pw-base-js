@@ -1,8 +1,9 @@
 {
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "yarn run build"
+    "test": "echo \"no tests specified\" && exit 0",
+    "prepublishOnly": "git diff-index --quiet HEAD && yarn run test && yarn build",
+    "preversion": "yarn test"
   },
   "files": [
     "dist/"
